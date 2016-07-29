@@ -1,5 +1,9 @@
 node('redhat01') {
 	env.PATH = "/root/.chefdk/gem/ruby/2.1.0/bin:/root/terraform:/opt/chefdk/embedded/bin:${env.PATH}"
+	env.AWS_ACCESS_KEY_ID = "AKIAIGOLFPBMKRYU2ROA"
+	env.AWS_SECRET_ACCESS_KEY = "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"
+	env.AWS_DEFAULT_REGION = "eu-west-1"
+	
 	stage 'Checkout'
 	// Get our code from the GitHub repository
 	git url: 'https://github.com/james-s-nduka/round-robin.git'
@@ -10,6 +14,8 @@ node('redhat01') {
 
 	// Provision the environment with code deployed
 	stage 'Build'
+	env.WORKSPACE = pwd()
+	sh 'aws s3 cp s3://syndicate-devops/ssh-keys/mega_syndicate_west.pem ${env.WORKSPACE}/keys/client.rb'
 	sh 'rake ENVIRONMENT=build build'
 
 	// Run ServerSpec like tests on the environment
