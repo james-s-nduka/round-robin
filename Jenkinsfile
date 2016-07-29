@@ -15,7 +15,7 @@ node('redhat01') {
 	// Provision the environment with code deployed
 	stage 'Build'
 	env.WORKSPACE = pwd()
-	sh "aws s3 cp s3://syndicate-devops/ssh-keys/mega_syndicate_west.pem ${env.WORKSPACE}/keys/client.rb"
+	sh "aws s3 cp s3://syndicate-devops/ssh_keys/mega_syndicate_west.pem ${env.WORKSPACE}/keys/client.rb"
 	sh 'rake ENVIRONMENT=build build'
 
 	// Run ServerSpec like tests on the environment
