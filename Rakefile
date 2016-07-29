@@ -19,7 +19,6 @@ end
 desc "Run tests on the new environment"
 task :test do
   puts "Running Linting and Test Suites"
-  sh "inspec"
 end
 
 desc "De-provision environment"
