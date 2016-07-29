@@ -1,0 +1,1 @@
+Place mega-syndicate pem file within this directory locally

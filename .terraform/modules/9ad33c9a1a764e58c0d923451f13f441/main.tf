@@ -10,7 +10,8 @@ resource "aws_instance" "app_node" {
 	private_ip = "${lookup(var.private_ips, count.index)}"
 
 	tags {
-		Name = "${var.app_instance}-${count.index}"
+		Name = "${var.app_instance}_${count.index}"
+		Environment = "${var.environment}"
 	}
 
 	connection {
@@ -40,6 +41,7 @@ resource "aws_subnet" "app" {
 
 	tags {
 		Name = "APP_ROUND_ROBIN"
+		Environment = "${var.environment}"
 	}
 }
 
@@ -49,6 +51,7 @@ resource "aws_security_group" "app_sg" {
 	description = "App instance traffic rules"
 	vpc_id = "${var.vpc}"
 
+	# Only allow inbound from the Web Server
 	ingress {
 		from_port = 8484
 		to_port = 8484
@@ -56,12 +59,20 @@ resource "aws_security_group" "app_sg" {
 		security_groups = ["${var.web_security_group}"]
 	}
 
-	# MAKE SURE TO DELETE
+	# Allow inbound from the Web Server
 	ingress {
 		from_port = 22
 		to_port = 22
 		protocol = "tcp"
-		cidr_blocks = ["0.0.0.0/0"]
+		security_groups = ["${var.web_security_group}"]
+	}
+
+	# Allow inbound from Workstation, CI Server, Test and Prod
+	ingress {
+		from_port = 22
+		to_port = 22
+		protocol = "tcp"
+		cidr_blocks = ["${var.ip_for_ssh}"]
 	}
 	
 	egress {
@@ -73,5 +84,6 @@ resource "aws_security_group" "app_sg" {
 
 	tags {
 		Name = "APP_SG"
+		Environment = "${var.environment}"
 	}
 }
