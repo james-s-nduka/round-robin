@@ -9,5 +9,7 @@ variable "web_user_data" { default = "./scripts/web_server.sh"}
 variable "keyname" { default = "mega_syndicate_west"}
 variable "keyfile" { default = "./keys/mega_syndicate_west.pem"}
 
+variable "access_key" {}
+variable "secret_key" {}
 variable "environment" {}
 variable "ip_for_ssh" {}
