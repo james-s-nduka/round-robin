@@ -24,5 +24,5 @@ end
 
 execute 'install policy core utils' do
   command 'yum install -y policycoreutils-devel'
-  user "root"
+  user 'root'
 end

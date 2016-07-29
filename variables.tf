@@ -3,8 +3,11 @@ variable "vpc" { default = "vpc-847be3e1" }
 #Latest Centos Image
 variable "ami" { default = "ami-cb8fe3b8" }
 variable "instance_type" { default = "t2.micro"}
-variable "web_instance" { default = "web-server-rr"}
+variable "web_instance" { default = "web_server"}
 variable "subnet_cidr" { default = "10.5.6.0/24"}
 variable "web_user_data" { default = "./scripts/web_server.sh"}
 variable "keyname" { default = "mega_syndicate_west"}
 variable "keyfile" { default = "./keys/mega_syndicate_west.pem"}
+
+variable "environment" {}
+variable "ip_for_ssh" {}

@@ -59,12 +59,12 @@ resource "aws_security_group" "web_sg" {
 		cidr_blocks = ["0.0.0.0/0"]
 	}
 
-	# MAKE SURE TO DELETE
+	# Only allow inbound from Workstation, CI Server, Test and Prod
 	ingress {
 		from_port = 22
 		to_port = 22
 		protocol = "tcp"
-		cidr_blocks = ["0.0.0.0/0"]
+		cidr_blocks = ["${var.ip_for_ssh}"]
 	}
 
 	egress {
@@ -83,4 +83,6 @@ module "app_servers" {
 	source = "./modules"
 	servers = 2
 	web_security_group = "${aws_security_group.web_sg.id}"
+	environment = "${var.environment}"
+	ip_for_ssh = "${var.ip_for_ssh}"
 }
