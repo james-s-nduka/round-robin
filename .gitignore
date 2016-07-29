@@ -6,4 +6,4 @@
 *.un~
 pkg/
 
-/keys
+keys/
