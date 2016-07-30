@@ -1,7 +1,7 @@
 node('redhat01') {
 	env.PATH = "/root/.chefdk/gem/ruby/2.1.0/bin:/root/terraform:/opt/chefdk/embedded/bin:${env.PATH}"
-	env.AWS_ACCESS_KEY_ID = 'AKIAIGOLFPBMKRYU2ROA'
-	env.AWS_SECRET_ACCESS_KEY = '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'
+	env.AWS_ACCESS_KEY_ID = ''
+	env.AWS_SECRET_ACCESS_KEY = ''
 	env.AWS_DEFAULT_REGION = 'eu-west-1'
 	
 	stage 'Checkout'
