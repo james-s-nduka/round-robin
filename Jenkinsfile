@@ -24,7 +24,7 @@ node('redhat01') {
 
 	// Check Deployment of environment
 	stage 'Deploy'
-	input 'Confirm the application is up and serving web service?'
+	input 'Confirm the application server is up and serving web service?'
 
 	// Once we are done we destroy the short-lived environment
 	stage 'Destroy'

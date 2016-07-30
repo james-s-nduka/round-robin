@@ -1,6 +1,6 @@
 variable "aws_region" { default = "eu-west-1" }
 variable "vpc" { default = "vpc-847be3e1" }
-#Latest Centos Image
+#Latest Centos 7 Image
 variable "ami" { default = "ami-cb8fe3b8" }
 variable "instance_type" { default = "t2.micro"}
 variable "web_instance" { default = "web_server"}
