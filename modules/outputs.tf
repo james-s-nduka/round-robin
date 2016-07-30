@@ -13,3 +13,11 @@ output "private_ip_0" {
 output "private_ip_1" {
 	value = "${aws_instance.app_node.1.private_ip}"
 }
+
+output "public_ip_0" {
+	value = "${aws_instance.app_node.0.public_ip}"
+}
+
+output "public_ip_1" {
+	value = "${aws_instance.app_node.1.public_ip}"
+}
