@@ -4,7 +4,6 @@ resource "aws_instance" "app_node" {
 	instance_type = "${var.instance_type}"
 	subnet_id = "${aws_subnet.app.id}"
 	security_groups = ["${aws_security_group.app_sg.id}"]
-	user_data = "${file(var.app_user_data)}"
 	key_name = "${var.keyname}"
 	count = "${var.servers}"
 	private_ip = "${lookup(var.private_ips, count.index)}"

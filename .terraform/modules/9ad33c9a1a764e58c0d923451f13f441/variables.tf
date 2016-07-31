@@ -21,7 +21,6 @@ variable "web_security_group" {}
 variable "instance_type" { default = "t2.micro"}
 variable "app_instance" { default = "app_server"}
 variable "subnet_cidr" { default = "10.5.7.0/24" }
-variable "app_user_data" { default = "./scripts/app_server.sh"}
 variable "keyname" { default = "mega_syndicate_west"}
 variable "keyfile" { default = "./keys/mega_syndicate_west.pem"}
 variable "environment" {}

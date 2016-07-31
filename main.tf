@@ -9,7 +9,6 @@ resource "aws_instance" "web_server" {
 	instance_type = "${var.instance_type}"
 	subnet_id = "${aws_subnet.web.id}"
 	security_groups = ["${aws_security_group.web_sg.id}"]
-	user_data = "${file(var.web_user_data)}"
 	key_name = "${var.keyname}"
 
 	tags {
