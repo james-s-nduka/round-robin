@@ -5,8 +5,8 @@ events {
 
 http {
   upstream roundrobin {
-    server 10.5.7.225:8484;
-    server 10.5.7.251:8484;
+    server <%= node['round-robin']['app_server_1'] %>:8484;
+    server <%= node['round-robin']['app_server_2'] %>:8484;
   }
 
   server {
