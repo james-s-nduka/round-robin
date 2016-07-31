@@ -19,7 +19,6 @@ node('redhat01') {
 
 	// Run ServerSpec like tests on the environment
 	stage 'Test'
-	sh 'rake ENVIRONMENT=build test'
 
 	// Check Deployment of environment
 	stage 'Deploy'
