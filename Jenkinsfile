@@ -1,5 +1,7 @@
 node('redhat01') {
 	env.PATH = "/root/.chefdk/gem/ruby/2.1.0/bin:/root/terraform:/opt/chefdk/embedded/bin:${env.PATH}"
+	env.GEM_PATH = '/root/.chefdk/gem/ruby/2.1.0:/opt/chefdk/embedded/lib/ruby/gems/2.1.0'
+	env.GEM_ROOT = '/opt/chefdk/embedded/lib/ruby/gems/2.1.0'
 
 	stage 'Checkout'
 	// Get our code from the GitHub repository
