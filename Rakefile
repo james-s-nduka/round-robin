@@ -1,6 +1,5 @@
 env = ENV["ENVIRONMENT"] 
 
-
 desc "Run verification of new code"
 task :verify do
   puts "Verify TF and Cookbooks syntax and standards"
