@@ -42,6 +42,10 @@ Vagrant.configure('2') do |config|
     vb.memory = '1024'
   end
 
+  config.vm.provision 'shell', inline: <<-SHELL
+     sudo yum install net-tools -y
+   SHELL
+
   config.vm.provision 'chef_solo' do |chef|
     chef.install = false
     chef.run_list = ['recipe[round-robin::appserver]']

@@ -22,13 +22,16 @@ end
 # is Chef installed?
 describe package('chef') do
   it { should be_installed }
+end
+
+describe package('chef') do
   its('version') { should match (/12\.\d+\.\d+/) }
 end
 
 # is GO lang installed?
 describe command('/usr/local/go/bin/go version') do
- its('stdout') { should match (/go version go\d+.\d+.\d+ linux\/amd64/) }
-ends
+  its('stdout') { should match (/go version go\d+.\d+.\d+ linux\/amd64/) }
+end
 
 # is Datadog installed?
 #describe package('datadog-agent') do
