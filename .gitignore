@@ -7,3 +7,4 @@
 pkg/
 
 keys/*.pem
+.vagrant/*
