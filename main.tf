@@ -1,7 +1,7 @@
 provider "aws" {
 	region = "${var.aws_region}"
-	access_key = "${var.access_key}"
-	secret_key = "${var.secret_key}"
+	#access_key = "${var.access_key}"
+	#secret_key = "${var.secret_key}"
 }
 
 resource "aws_instance" "web_server" {
@@ -22,7 +22,7 @@ resource "aws_instance" "web_server" {
 	}
 
 	provisioner "file" {
-		source = "./chef/"
+		source = "./cookbooks/"
 		destination = "/tmp"
 	}
 

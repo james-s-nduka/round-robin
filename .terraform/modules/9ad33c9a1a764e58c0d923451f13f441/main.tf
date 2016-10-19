@@ -20,8 +20,13 @@ resource "aws_instance" "app_node" {
 	}
 
 	provisioner "file" {
-		source = "./chef/"
+		source = "./cookbooks/"
 		destination = "/tmp"
+	}
+
+	provisioner "file" {
+		source = "./src/"
+		destination = "/src/round-robin"
 	}
 
 	provisioner "remote-exec" {

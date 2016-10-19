@@ -8,3 +8,4 @@ pkg/
 
 keys/*.pem
 .vagrant/*
+*.tfstate

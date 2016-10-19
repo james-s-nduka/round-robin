@@ -26,16 +26,16 @@ describe package('chef') do
 end
 
 # is GO lang installed?
-describe command('go version') do
+describe command('/usr/local/go/bin/go version') do
  its('stdout') { should match (/go version go\d+.\d+.\d+ linux\/amd64/) }
 ends
 
 # is Datadog installed?
-describe package('datadog-agent') do
-  it { should be_installed }
-  its('version') { should match (/5\.\d+\.\d+/)}
-end
+#describe package('datadog-agent') do
+#  it { should be_installed }
+#  its('version') { should match (/5\.\d+\.\d+/)}
+#end
 
-describe service('datadog-agent') do
-  it { should be_enabled }
-end
+#describe service('datadog-agent') do
+#  it { should be_enabled }
+#end
