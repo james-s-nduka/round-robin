@@ -19,9 +19,18 @@ resource "aws_instance" "app_node" {
 		agent = "false"
 	}
 
+	provisioner "remote-exec" {
+		inline = [
+			"mkdir /tmp/cookbooks",
+			"sudo mkdir /src && sudo mkdir /src/round-robin",
+			"sudo chown -R centos:centos /src"
+
+		]
+	}
+
 	provisioner "file" {
 		source = "./cookbooks/"
-		destination = "/tmp"
+		destination = "/tmp/cookbooks"
 	}
 
 	provisioner "file" {

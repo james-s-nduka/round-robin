@@ -1,7 +1,7 @@
 provider "aws" {
 	region = "${var.aws_region}"
-	#access_key = "${var.access_key}"
-	#secret_key = "${var.secret_key}"
+	access_key = "${var.access_key}"
+	secret_key = "${var.secret_key}"
 }
 
 resource "aws_instance" "web_server" {
@@ -21,9 +21,15 @@ resource "aws_instance" "web_server" {
 		agent = "false"
 	}
 
+	provisioner "remote-exec" {
+		inline = [
+			"mkdir /tmp/cookbooks"
+		]
+	}
+
 	provisioner "file" {
 		source = "./cookbooks/"
-		destination = "/tmp"
+		destination = "/tmp/cookbooks"
 	}
 
 	provisioner "remote-exec" {
