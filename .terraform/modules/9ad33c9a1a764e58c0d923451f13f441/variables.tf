@@ -1,8 +1,8 @@
 variable "vpc" { default = "vpc-847be3e1" }
 
 variable "ami" {
-	description = "Custom Centos Image in EU-WEST-1 region"
-	default = "ami-cb8fe3b8" 
+	description = "Packer Created Centos Image in EU-WEST-1 region"
+	default = "ami-7c94dc0f" 
 }
 
 variable "servers" {
