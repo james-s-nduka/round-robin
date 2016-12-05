@@ -1,0 +1,44 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: false
+
+platforms:
+  - name: centos-go-chef
+    driver:
+      box: centos-go-chef
+      box_url: centos-go-chef
+      customize:
+        cpus: 2
+        memory: 1024
+      synced_folders:
+        - ["../../src", "/src/round-robin"]
+        - [".", "/vagrant", "type: :virtualbox"]
+
+suites:
+  - name: appserver
+    driver:
+      network:
+        - ["forwarded_port", {guest: 8484, host: 1234}]
+        #- ["private_network", {ip: "10.0.2.5"}]
+    verifier: 
+      name: inspec
+    run_list:
+      - recipe[round-robin::appserver]
+    attributes:
+  - name: webserver
+    driver:
+      network:
+        - ["forwarded_port", {guest: 80, host: 80}]
+        #- ["private_network", {ip: "10.0.2.6"}]
+    verifier:
+      name: inspec
+    run_list:
+      - recipe[round-robin::webserver]
+    attributes:
+      round-robin:
+        app_server_1: 192.168.56.1
+        app_port: 1234

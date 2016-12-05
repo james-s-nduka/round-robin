@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2222'
+username: vagrant
+ssh_key: C:/Users/Admin/.vagrant.d/boxes/centos-go-chef/0/virtualbox/vagrant_private_key
+last_action: setup

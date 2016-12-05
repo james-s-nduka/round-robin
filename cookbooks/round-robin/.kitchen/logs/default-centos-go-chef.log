@@ -1,0 +1,90 @@
+I, [2016-11-30T18:03:44.564931 #11128]  INFO -- default-centos-go-chef: -----> Cleaning up any prior instances of <default-centos-go-chef>
+I, [2016-11-30T18:03:44.566934 #11128]  INFO -- default-centos-go-chef: -----> Destroying <default-centos-go-chef>...
+I, [2016-11-30T18:03:48.612865 #11128]  INFO -- default-centos-go-chef: ==> default: Forcing shutdown of VM...
+I, [2016-11-30T18:03:49.826409 #11128]  INFO -- default-centos-go-chef: ==> default: Destroying VM and associated drives...
+I, [2016-11-30T18:03:50.482588 #11128]  INFO -- default-centos-go-chef: Vagrant instance <default-centos-go-chef> destroyed.
+I, [2016-11-30T18:03:50.484591 #11128]  INFO -- default-centos-go-chef: Finished destroying <default-centos-go-chef> (0m5.91s).
+I, [2016-11-30T18:03:50.486591 #11128]  INFO -- default-centos-go-chef: -----> Testing <default-centos-go-chef>
+I, [2016-11-30T18:03:50.486591 #11128]  INFO -- default-centos-go-chef: -----> Creating <default-centos-go-chef>...
+I, [2016-11-30T18:03:53.379249 #11128]  INFO -- default-centos-go-chef: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-11-30T18:03:53.576296 #11128]  INFO -- default-centos-go-chef: ==> default: Importing base box 'centos-go-chef'...
+I, [2016-11-30T18:04:08.819241 #11128]  INFO -- default-centos-go-chef: [KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2016-11-30T18:04:09.640889 #11128]  INFO -- default-centos-go-chef: ==> default: Setting the name of the VM: kitchen-round-robin-default-centos-go-chef_default_1480529049575_37485
+I, [2016-11-30T18:04:12.908904 #11128]  INFO -- default-centos-go-chef: ==> default: Clearing any previously set network interfaces...
+I, [2016-11-30T18:04:12.997061 #11128]  INFO -- default-centos-go-chef: ==> default: Preparing network interfaces based on configuration...
+I, [2016-11-30T18:04:12.997061 #11128]  INFO -- default-centos-go-chef:     default: Adapter 1: nat
+I, [2016-11-30T18:04:13.085695 #11128]  INFO -- default-centos-go-chef: ==> default: Forwarding ports...
+I, [2016-11-30T18:04:13.183476 #11128]  INFO -- default-centos-go-chef:     default: 8484 (guest) => 8080 (host) (adapter 1)
+I, [2016-11-30T18:04:13.183476 #11128]  INFO -- default-centos-go-chef:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2016-11-30T18:04:13.437280 #11128]  INFO -- default-centos-go-chef: ==> default: Running 'pre-boot' VM customizations...
+I, [2016-11-30T18:04:13.613982 #11128]  INFO -- default-centos-go-chef: ==> default: Booting VM...
+I, [2016-11-30T18:04:18.551944 #11128]  INFO -- default-centos-go-chef: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2016-11-30T18:04:19.043556 #11128]  INFO -- default-centos-go-chef:     default: SSH address: 127.0.0.1:2222
+I, [2016-11-30T18:04:19.043556 #11128]  INFO -- default-centos-go-chef:     default: SSH username: vagrant
+I, [2016-11-30T18:04:19.043556 #11128]  INFO -- default-centos-go-chef:     default: SSH auth method: private key
+I, [2016-11-30T18:04:34.426829 #11128]  INFO -- default-centos-go-chef:     default: Warning: Remote connection disconnect. Retrying...
+I, [2016-11-30T18:04:46.658871 #11128]  INFO -- default-centos-go-chef: ==> default: Machine booted and ready!
+I, [2016-11-30T18:04:49.047320 #11128]  INFO -- default-centos-go-chef: [default] GuestAdditions 5.1.8 running --- OK.
+I, [2016-11-30T18:04:49.305152 #11128]  INFO -- default-centos-go-chef: ==> default: Checking for guest additions in VM...
+I, [2016-11-30T18:04:49.381702 #11128]  INFO -- default-centos-go-chef: ==> default: Setting hostname...
+I, [2016-11-30T18:04:51.103414 #11128]  INFO -- default-centos-go-chef: ==> default: Mounting shared folders...
+I, [2016-11-30T18:04:51.103414 #11128]  INFO -- default-centos-go-chef:     default: /vagrant => C:/Users/Admin/Documents/GitLab_Projects/round-robin/cookbooks/round-robin
+I, [2016-11-30T18:04:51.996534 #11128]  INFO -- default-centos-go-chef:     default: /src/round-robin => C:/Users/Admin/Documents/GitLab_Projects/round-robin/src
+I, [2016-11-30T18:04:52.862549 #11128]  INFO -- default-centos-go-chef:     default: /tmp/omnibus/cache => C:/Users/Admin/.kitchen/cache
+I, [2016-11-30T18:04:53.708727 #11128]  INFO -- default-centos-go-chef: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2016-11-30T18:05:03.803922 #11128]  INFO -- default-centos-go-chef: [SSH] Established
+I, [2016-11-30T18:05:03.805758 #11128]  INFO -- default-centos-go-chef: Vagrant instance <default-centos-go-chef> created.
+I, [2016-11-30T18:05:03.808692 #11128]  INFO -- default-centos-go-chef: Finished creating <default-centos-go-chef> (1m13.32s).
+I, [2016-11-30T18:05:03.809668 #11128]  INFO -- default-centos-go-chef: -----> Converging <default-centos-go-chef>...
+I, [2016-11-30T18:05:03.811626 #11128]  INFO -- default-centos-go-chef: Preparing files for transfer
+I, [2016-11-30T18:05:03.812603 #11128]  INFO -- default-centos-go-chef: Preparing dna.json
+I, [2016-11-30T18:05:03.814575 #11128]  INFO -- default-centos-go-chef: Preparing current project directory as a cookbook
+I, [2016-11-30T18:05:03.844233 #11128]  INFO -- default-centos-go-chef: Removing non-cookbook files before transfer
+I, [2016-11-30T18:05:03.857901 #11128]  INFO -- default-centos-go-chef: Preparing solo.rb
+I, [2016-11-30T18:05:03.918357 #11128]  INFO -- default-centos-go-chef: Transferring files to <default-centos-go-chef>
+I, [2016-11-30T18:05:06.567508 #11128]  INFO -- default-centos-go-chef: Starting Chef Client, version 12.15.19
+I, [2016-11-30T18:05:08.723019 #11128]  INFO -- default-centos-go-chef: Creating a new client identity for default-centos-go-chef using the validator key.
+I, [2016-11-30T18:05:08.969774 #11128]  INFO -- default-centos-go-chef: resolving cookbooks for run list: ["round-robin::appserver"]
+I, [2016-11-30T18:05:08.991106 #11128]  INFO -- default-centos-go-chef: Synchronizing Cookbooks:
+I, [2016-11-30T18:05:09.003831 #11128]  INFO -- default-centos-go-chef:   - round-robin (0.1.0)
+I, [2016-11-30T18:05:09.003831 #11128]  INFO -- default-centos-go-chef: Installing Cookbook Gems:
+I, [2016-11-30T18:05:09.003831 #11128]  INFO -- default-centos-go-chef: Compiling Cookbooks...
+I, [2016-11-30T18:05:09.015547 #11128]  INFO -- default-centos-go-chef: Converging 1 resources
+I, [2016-11-30T18:05:09.015547 #11128]  INFO -- default-centos-go-chef: Recipe: round-robin::appserver
+I, [2016-11-30T18:05:09.069894 #11128]  INFO -- default-centos-go-chef:   * execute[compile and run app] action run
+I, [2016-11-30T18:05:09.069894 #11128]  INFO -- default-centos-go-chef:     - execute /usr/local/go/bin/go run /src/round-robin/app.go &
+I, [2016-11-30T18:05:09.177534 #11128]  INFO -- default-centos-go-chef: 
+I, [2016-11-30T18:05:09.178035 #11128]  INFO -- default-centos-go-chef: Running handlers:
+I, [2016-11-30T18:05:09.178035 #11128]  INFO -- default-centos-go-chef: Running handlers complete
+I, [2016-11-30T18:05:09.178035 #11128]  INFO -- default-centos-go-chef: Chef Client finished, 1/1 resources updated in 02 seconds
+I, [2016-11-30T18:05:09.330592 #11128]  INFO -- default-centos-go-chef: Finished converging <default-centos-go-chef> (0m5.52s).
+I, [2016-11-30T18:05:09.331569 #11128]  INFO -- default-centos-go-chef: -----> Setting up <default-centos-go-chef>...
+I, [2016-11-30T18:05:09.334502 #11128]  INFO -- default-centos-go-chef: Finished setting up <default-centos-go-chef> (0m0.00s).
+I, [2016-11-30T18:05:09.335480 #11128]  INFO -- default-centos-go-chef: -----> Verifying <default-centos-go-chef>...
+I, [2016-11-30T18:05:10.959146 #11128]  INFO -- default-centos-go-chef: Detected alternative framework tests for `inspec`
+I, [2016-11-30T18:05:10.961100 #11128]  INFO -- default-centos-go-chef: Use `C:/Users/Admin/Documents/GitLab_Projects/round-robin/cookbooks/round-robin/test/integration/default/inspec` for testing
+E, [2016-11-30T18:05:13.734592 #11128] ERROR -- default-centos-go-chef: Verify failed on instance <default-centos-go-chef>.
+E, [2016-11-30T18:05:13.734592 #11128] ERROR -- default-centos-go-chef: ------Exception-------
+E, [2016-11-30T18:05:13.735339 #11128] ERROR -- default-centos-go-chef: Class: Kitchen::ActionFailed
+E, [2016-11-30T18:05:13.735491 #11128] ERROR -- default-centos-go-chef: Message: Inspec Runner returns 1
+E, [2016-11-30T18:05:13.735491 #11128] ERROR -- default-centos-go-chef: ----------------------
+E, [2016-11-30T18:05:13.735491 #11128] ERROR -- default-centos-go-chef: ------Backtrace-------
+E, [2016-11-30T18:05:13.735491 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-inspec-0.15.0/lib/kitchen/verifier/inspec.rb:77:in `call'
+E, [2016-11-30T18:05:13.736487 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:423:in `block in verify_action'
+E, [2016-11-30T18:05:13.736487 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:513:in `call'
+E, [2016-11-30T18:05:13.736487 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-11-30T18:05:13.736487 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-11-30T18:05:13.737468 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-30T18:05:13.738427 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:477:in `action'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:415:in `verify_action'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:347:in `each'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:160:in `verify'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:189:in `block in test'
+E, [2016-11-30T18:05:13.739429 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-30T18:05:13.740381 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/instance.rb:185:in `test'
+E, [2016-11-30T18:05:13.740381 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-30T18:05:13.740381 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-30T18:05:13.740381 #11128] ERROR -- default-centos-go-chef: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.10.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-30T18:05:13.740381 #11128] ERROR -- default-centos-go-chef: ----End Backtrace-----

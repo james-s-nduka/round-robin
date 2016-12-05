@@ -1,7 +1,5 @@
 variable "aws_region" { default = "eu-west-1" }
 variable "vpc" { default = "vpc-847be3e1" }
-# Latest Centos 7 Image
-#variable "ami" { default = "ami-cb8fe3b8" }
 # Packer Generated AMI
 variable "ami" { default = "ami-7c94dc0f" }
 variable "instance_type" { default = "t2.micro"}

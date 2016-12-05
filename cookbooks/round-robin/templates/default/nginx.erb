@@ -5,8 +5,8 @@ events {
 
 http {
   upstream roundrobin {
-    server <%= node['round-robin']['app_server_1'] %>:8484;
-    server <%= node['round-robin']['app_server_2'] %>:8484;
+    server <%= node['round-robin']['app_server_1'] %>:<%= node['round-robin']['app_port'] %>;
+    server <%= node['round-robin']['app_server_2'] %>:<%= node['round-robin']['app_port'] %>;
   }
 
   server {

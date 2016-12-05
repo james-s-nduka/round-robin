@@ -7,7 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 
+package 'epel-release' do
+  action :install
+end
+
 package 'nginx' do
+  action :install
+end
+
+package 'net-tools' do
   action :install
 end
 
@@ -22,7 +30,6 @@ service 'nginx' do
   action [:start, :enable]
 end
 
-execute 'install policy core utils' do
-  command 'yum install -y policycoreutils-devel'
-  user 'root'
+package 'policycoreutils-devel' do
+  action :install
 end

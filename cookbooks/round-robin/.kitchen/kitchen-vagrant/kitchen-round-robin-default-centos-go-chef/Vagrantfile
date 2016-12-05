@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |c|
+  c.berkshelf.enabled = false if Vagrant.has_plugin?("vagrant-berkshelf")
+  c.vm.box = "centos-go-chef"
+  c.vm.box_url = "centos-go-chef"
+  c.vm.hostname = "default-centos-go-chef"
+  c.vm.network(:forwarded_port, {:guest=>8484, :host=>8080})
+  c.vm.synced_folder ".", "/vagrant", disabled: true
+  c.vm.synced_folder "C:/Users/Admin/Documents/GitLab_Projects/round-robin/src", "/src/round-robin", nil
+  c.vm.synced_folder "C:/Users/Admin/Documents/GitLab_Projects/round-robin/cookbooks/round-robin", "/vagrant", type: :virtualbox
+  c.vm.synced_folder "C:/Users/Admin/.kitchen/cache", "/tmp/omnibus/cache", create: true
+  c.vm.provider :virtualbox do |p|
+    p.customize ["modifyvm", :id, "--cpus", "1"]
+    p.customize ["modifyvm", :id, "--memory", "1024"]
+  end
+end
